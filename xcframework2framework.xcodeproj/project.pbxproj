@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8E59681629F7FED300C05D06 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E59681529F7FED300C05D06 /* main.swift */; };
+		8E59681629F7FED300C05D06 /* cli.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E59681529F7FED300C05D06 /* cli.swift */; };
+		8E59681E29F7FF8600C05D06 /* ArgumentParser in Frameworks */ = {isa = PBXBuildFile; productRef = 8E59681D29F7FF8600C05D06 /* ArgumentParser */; };
+		8E59682129F801ED00C05D06 /* Rainbow in Frameworks */ = {isa = PBXBuildFile; productRef = 8E59682029F801ED00C05D06 /* Rainbow */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,7 +26,7 @@
 
 /* Begin PBXFileReference section */
 		8E59681229F7FED300C05D06 /* xcframework2framework */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = xcframework2framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8E59681529F7FED300C05D06 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		8E59681529F7FED300C05D06 /* cli.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cli.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +34,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E59681E29F7FF8600C05D06 /* ArgumentParser in Frameworks */,
+				8E59682129F801ED00C05D06 /* Rainbow in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,7 +61,7 @@
 		8E59681429F7FED300C05D06 /* xcframework2framework */ = {
 			isa = PBXGroup;
 			children = (
-				8E59681529F7FED300C05D06 /* main.swift */,
+				8E59681529F7FED300C05D06 /* cli.swift */,
 			);
 			path = xcframework2framework;
 			sourceTree = "<group>";
@@ -78,6 +82,10 @@
 			dependencies = (
 			);
 			name = xcframework2framework;
+			packageProductDependencies = (
+				8E59681D29F7FF8600C05D06 /* ArgumentParser */,
+				8E59682029F801ED00C05D06 /* Rainbow */,
+			);
 			productName = xcframework2framework;
 			productReference = 8E59681229F7FED300C05D06 /* xcframework2framework */;
 			productType = "com.apple.product-type.tool";
@@ -106,6 +114,10 @@
 				Base,
 			);
 			mainGroup = 8E59680929F7FED300C05D06;
+			packageReferences = (
+				8E59681C29F7FF8600C05D06 /* XCRemoteSwiftPackageReference "swift-argument-parser" */,
+				8E59681F29F801ED00C05D06 /* XCRemoteSwiftPackageReference "Rainbow" */,
+			);
 			productRefGroup = 8E59681329F7FED300C05D06 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -120,7 +132,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8E59681629F7FED300C05D06 /* main.swift in Sources */,
+				8E59681629F7FED300C05D06 /* cli.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,6 +296,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8E59681C29F7FF8600C05D06 /* XCRemoteSwiftPackageReference "swift-argument-parser" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-argument-parser.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		8E59681F29F801ED00C05D06 /* XCRemoteSwiftPackageReference "Rainbow" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Rainbow.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8E59681D29F7FF8600C05D06 /* ArgumentParser */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8E59681C29F7FF8600C05D06 /* XCRemoteSwiftPackageReference "swift-argument-parser" */;
+			productName = ArgumentParser;
+		};
+		8E59682029F801ED00C05D06 /* Rainbow */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8E59681F29F801ED00C05D06 /* XCRemoteSwiftPackageReference "Rainbow" */;
+			productName = Rainbow;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8E59680A29F7FED300C05D06 /* Project object */;
 }
